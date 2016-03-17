@@ -1,0 +1,259 @@
+/* General Properties */ 
+header {
+       text-align:center;
+}
+
+body {
+	background: #f0f0f0;
+	border: none;
+	color: #333;
+	margin: 0 auto;
+	font: 14px/24px Helvetica, Arial, sans-serif;
+	width: 960px;
+}
+
+h1 {
+	font: normal bold 34px/50px Arial, Helvetica, sans-serif;
+	padding-top: 30px;
+}
+
+h2 {
+	font-size: 28px;
+	line-height: 44px;
+	padding: 22px 0;
+    text-align:left;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 22px;
+	padding: 11px 0;
+    text-align:left;
+}
+
+h5 {
+	font-size: 36px;
+	text-align: center;
+	color: #969696;
+}
+
+h6 {
+	font-size: 36px;
+	text-align: center;
+	color: #4D4D4D;
+    line-height: 0px;
+}
+
+/* Add Task */
+nav#addtask a{
+	color: #fff;
+	background-color: #222;
+	font: normal bold 14px/44px Arial, Helvetica, sans-serif;
+	padding: 2px 10px;
+	margin-right: 40px;
+	text-align: center;
+    text-decoration:none;
+    position:fixed;
+    right:10px;
+    bottom:20px;
+    box-shadow: 3px 3px 3px #474747;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	
+ }
+
+nav#addtask a:hover{
+	color: #FF9900;
+	text-decoration: none;
+    box-shadow: 5px 5px 5px #474747;
+}
+
+/* Login */
+nav#login a{
+	color: #fff;
+	background-color: #222;
+	font: normal bold 14px/44px Arial, Helvetica, sans-serif;
+	padding: 2px 10px;
+	margin-right: 40px;
+	text-align: center;
+    text-decoration:none;
+    position:fixed;
+    right:10px;
+    top:20px;
+    box-shadow: 3px 3px 3px #474747;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	
+ }
+
+nav#login a:hover{
+	color: #FF9900;
+	text-decoration: none;
+    box-shadow: 5px 5px 5px #474747;
+}
+
+/* Navigation Bar */
+
+nav#navigator{
+	padding: 10px 0px;
+	width: 100%;
+	background-color: #333;
+    -moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+    
+}
+
+nav#navigator ul {
+	margin: 0 auto;
+	width: 960px;
+	border: none;
+    text-align:left;
+}
+    
+nav#navigator ul li {
+	display: inline;
+	list-style: none;
+	padding-left: 40px;
+}
+
+nav#navigator ul li a {
+	color: #777;
+	background-color: #222;
+	border: 2px solid #222;
+	font: normal bold 14px/44px Arial, Helvetica, sans-serif;
+	padding: 10px;
+	margin-right: 40px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	text-align: center;
+    text-decoration:none;
+
+}
+
+nav#navigator ul li a:hover, nav#navigator ul li a:focus {
+	background-color: #111;
+	border: 2px solid #444;
+	color: #FF9900;
+	text-decoration: none;
+}
+
+nav#navigator ul li a.selected {
+	color: #fff;
+}
+
+nav#navigator ul li a.selected:hover {
+	color: #FF9900;
+}
+
+nav#navigator ul li a.account {
+	color: #fff;
+    background-color: none;
+	border: none;
+    
+}
+
+nav#navigator ul li a.account:hover {
+	background-color: none;
+	border: none;
+	color: none;
+	text-decoration: none;
+}
+
+/* Task Bars */
+
+#intro {
+	background-color: #ccc;
+	margin-top: 20px;
+	padding: 20px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+#intro h3{
+	font-weight: normal;
+	line-height: 15px;
+	padding: 0 0;
+	width: 900px;;
+}
+
+#intro h7{
+	font-weight: bold;
+	line-height: 20px;
+    font-size: 18px;
+    text-align: center;
+	padding: 0 0;
+	width: 900px;;
+}
+
+#intro h2 {
+	font-weight: bold;
+	line-height: 44px;
+	padding: 0 0 0 0;
+	width: 900px;
+}
+
+#intro h4 {
+	font-weight: 550;
+	line-height: 0px;
+	padding: 0 0 0 0;
+	width: 370px;
+    text-align:left;
+}
+
+
+
+#intro a {
+	color: #fff;
+	background-color: #333;
+	font: normal bold 14px/44px Arial, Helvetica, sans-serif;
+	padding: 10px;
+	margin-right: 40px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	text-align: right;
+    text-decoration:none;
+    box-shadow: 3px 3px 3px #474747;
+}
+
+#intro a:hover {
+	color: #FF9900;
+	background-color: #222;
+	text-decoration: none;
+    box-shadow: 5px 5px 5px #474747;
+}
+
+#intro input {
+	color: #fff;
+    background-color: #222;
+	font: normal bold 14px/44px Arial, Helvetica, sans-serif;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px; 
+	text-align: center;
+    text-decoration:none;
+    box-shadow: 3px 3px 3px #474747;
+}
+
+#intro input:hover {
+    color: #FF9900;
+	background-color: #222;
+	text-decoration: none;
+	box-shadow: 5px 5px 5px #474747;
+}
+
+
+#intro.today {
+             background-color: #F695A5;
+}
+
+#intro.threedays {
+             background-color: #FFB36B;
+}
+
+#intro.date {
+             background-color: #90D4A0;
+}
+
+#intro.overdue {
+             background-color: #FC4444;
+}

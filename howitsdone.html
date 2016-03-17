@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Home Page</title>
+    <link rel="stylesheet" href="stylesheets/default.css">
+</head>
+<body>
+	<header>
+    	<h1>Get It Done</h1>
+    </header>
+    <nav id="navigator">
+    	<ul>
+        	<li><a href="/MainPage">Explore</a></li>
+            <li><a href="MyTask">My Tasks</a></li>
+            <li><a href="TaskFeed">Task Feeds</a></li>
+            <li><a class="account">{% if user %}
+                  {{ user.email() }}
+                {% else %}
+                  User Not Logged In
+                {% endif %}
+            </a></li>
+        </ul>
+    </nav>
+
+<section id="intro" >
+    <h6> About:</h6>
+    <h7>1: Get It Done is a webapp that allows you to note down the tasks you have to remind yourself.</h7>
+    <br/><br/>
+    <h7>2: Users can also share their tasks with others so that others will know what tasks they have to do.</h7>
+</section>    
+
+<section id="intro" >
+    <h6> How It's Done:</h6>
+    <h7>Step 1: Log In!</h7>
+    <br/><br/>
+    <h7>Step 2: Add Task To Remind Yourself!</h7>
+    <br/><br/>
+    <h7>Step 3: Check out "My Task" to see what task you have!</h7>
+    <br/><br/>
+    <h7>Step 4: Check out "Explore" to see what task your friends have!</h7>
+    <br/><br/>
+    <h7>Step 5: Follow Your Friends And Teachers!</h7>
+    <br/><br/>
+    <h7>Step 6: Check out "Task Feed" to see updates of people you are followings!</h7>
+</section>
+
+	<nav id="addtask">
+		 <a href="AddTask">Add Task</a>
+	</nav>
+
+	<nav id="login">
+        <a href="{{url}}"> {{url_linktext}} </a>
+	</nav>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74999734-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

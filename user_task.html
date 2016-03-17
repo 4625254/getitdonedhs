@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>My Tasks</title>
+    <link rel="stylesheet" href="stylesheets/default.css">
+</head>
+<body>
+	<header>
+    	<h1>Get It Done</h1>
+    </header>
+    <nav id="navigator">
+    	<ul>
+        	<li><a href="/MainPage">Explore</a></li>
+            <li><a href="MyTask">My Tasks</a></li>
+            <li><a href="TaskFeed">Task Feeds</a></li>
+            <li><a class="account">{% if user %}
+                  {{ user.email() }}
+                {% else %}
+                  User Not Logged In
+                {% endif %}
+            </a></li>
+
+        </ul>
+    </nav>
+	
+<section id="intro">
+	<h2>{{profile}}'s Tasks </h2>
+	<form action="/TaskFeed">
+            <input type="hidden" name="email" value="{{email}}" />
+            <input type ="submit" value ="Follow" />
+    </form>
+</section>
+
+{% for task in tasks %}
+	{% if profile == task.person.email %}
+		{% if today == task.duedate %}
+			<section id="intro" class="today">
+		{% elif today > task.duedate %}
+			<section id="intro" class="overdue">
+		{% elif today + threedays >= task.duedate %}
+			<section id="intro" class="threedays">
+		{% elif today + threedays <= task.duedate %}
+			<section id="intro" class="date">
+		{% else %}
+			<section id="intro" class="date">
+		{% endif %}
+			<h2>{{task.taskname}}</h2>
+		{% if today == task.duedate %}
+			<h4>Today!</h4>
+		{% elif today > task.duedate %}
+			<h4>Overdue!</h4>
+		{% elif today + threedays == task.duedate %}
+			<h4>3 Days</h4>
+		{% elif today + twodays == task.duedate %}
+			<h4>2 Days</h4>
+		{% elif today + oneday == task.duedate %}
+			<h4>Tomorrow!</h4>
+		{% else %}
+			<h4>{{task.duedate}}</h4>
+		{% endif %}
+			<form action="/MyTask">
+			<input type="hidden" name="usertask" value="{{task.key.id()}}" />
+			<input type ="submit" value ="Add" />
+		</form>
+		</section>
+	{% endif %}
+{% endfor %}
+	
+	<nav id="addtask">
+		 <a href="AddTask">Add Task</a>
+	</nav>
+
+	<nav id="login">
+		<a href="{{url}}"> {{url_linktext}} </a>
+	</nav>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74999734-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
